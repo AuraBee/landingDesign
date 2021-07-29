@@ -16,7 +16,6 @@ body {
   color: #3b023b;
   margin: 0;
   height: 100vh;
-  background-color: tan;
 }
 
 .container {
@@ -224,38 +223,47 @@ ul li a {
 /* 
 FOOTER styles here
   */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.col {
+  border: 1px solid red;
+  float: right;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  margin: .5rem;
+}
+
 .footer {
   background-color: pink;
   padding: .5rem;
   overflow: hidden;
-  /*col nesting ends*/
-}
-
-.footer .cat-basket {
-  background-color: lawngreen;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: flex-wrap;
-          flex-direction: flex-wrap;
-  width: 100%;
-}
-
-.footer .col {
-  width: 12rem;
-  height: auto;
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  text-align: left;
-  margin: 0 1rem;
+  font-size: smaller;
   /*ul nesting ends*/
+  /*
+        } col nesting ends*/
 }
 
-.footer .col h1 {
+.footer .skill-basket {
+  background-color: lawngreen;
+}
+
+.footer h1 {
   margin: 0;
   padding: 0;
   font-family: inherit;
@@ -268,7 +276,7 @@ FOOTER styles here
   letter-spacing: 0.250em;
 }
 
-.footer .col ul {
+.footer ul {
   display: inline;
   margin: 0;
   padding: 0;
@@ -278,7 +286,7 @@ FOOTER styles here
   /*li ends*/
 }
 
-.footer .col ul li {
+.footer ul li {
   color: #f3f39b;
   font-size: 1rem;
   font-family: inherit;
@@ -292,11 +300,11 @@ FOOTER styles here
   -moz-transition: .2s;
 }
 
-.footer .col ul li a {
+.footer ul li a {
   color: #c91e87;
 }
 
-.footer .col ul li:hover, .footer .col ul li:focus {
+.footer ul li:hover, .footer ul li:focus {
   color: white;
   background: lawngreen;
   transition: .1s;
@@ -306,5 +314,31 @@ FOOTER styles here
 
 .footer .clearfix {
   clear: both;
+}
+
+/* from a minimum width of 650px and bigger */
+@media (min-width: 650px) {
+  body {
+    color: rebeccapurple;
+  }
+}
+
+/* from a minimum width of 400px up to a width of 649px */
+@media (min-width: 320px) and (max-width: 649px) {
+  body {
+    color: #6928aa;
+  }
+  .hero {
+    background-color: #ffebf6;
+  }
+  .about-me {
+    background-color: #ebf9ff;
+  }
+  .articles {
+    background-color: #ffa3e3;
+  }
+  .articles .projects {
+    background-color: #addcff;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -37,7 +37,7 @@ body {
     margin: 0;
     height: 100vh;
  
-    background-color: tan;
+    // background-color: tan;
 }
 
 
@@ -54,7 +54,9 @@ body {
 
 .image {
    padding-bottom: 3rem;
+  
 }
+
 
 .bold-text {
     font-weight: 900;
@@ -250,32 +252,46 @@ header {
 /* 
 FOOTER styles here
   */
+.wrapper {
+    display: flex;
+    justify-content: center;
+//    background: coral;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
 
+.col {
+    border: 1px solid red;
+    // width: 11rem;
+    // // height: auto;
+    float: right;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    margin:.5rem;
+
+}
 
 .footer {
-
     background-color: pink;
     padding:.5rem;
     overflow: hidden;
+    font-size: smaller;
 
-
-    .cat-basket {
+ .skill-basket {
         background-color: lawngreen;
-        display: flex;
-        flex-direction: flex-wrap;
-        width:100%;
+        // display: flex;
+        // flex-direction: flex-wrap;
+        // width:100%;
        
     }
     
-        .col {
-            width: 12rem;
-            height: auto;
-            float: left;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            text-align: left;
-            margin: 0 1rem;
+       
 
             h1 {
                 margin: 0;
@@ -330,12 +346,49 @@ FOOTER styles here
             } /*ul nesting ends*/
 
             
-        } /*col nesting ends*/
+      /*
+        } col nesting ends*/
 
   .clearfix {
     clear: both;
   }
+}
+   
+
+// }
+
+/* from a minimum width of 650px and bigger */
+@media (min-width: 650px) {
+   
+    body {
+        color: rebeccapurple;
+    }
 
 
 }
 
+/* from a minimum width of 400px up to a width of 649px */
+@media (min-width: 320px) and (max-width: 649px) {
+
+    body {
+        color: rgb(105, 40, 170);
+    }
+
+    .hero {
+        background-color: hsl(327, 100%, 96%);
+    }
+    
+    .about-me {
+        background-color: hsl(197, 100%, 96%);
+    }
+    
+    .articles {
+        background-color: hsl(318, 100%, 82%);  
+    
+    .projects {
+        background-color: hsl(206, 100%, 84%);
+    }
+    
+    
+    }
+}

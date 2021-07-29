@@ -27,7 +27,7 @@ const skill = [
     },
      {
         name: 'JavaScript',
-        thumbnail: '#',
+        thumbnail: ' fab fa-node ',
       
     },
     
@@ -67,7 +67,7 @@ skill.forEach((image) => {
     picture.src = image.thumbnail
     card.appendChild(picture)
 
-    const imageName = document.createElement('h2')
+    const imageName = document.createElement('h4')
     imageName.classList.add('image-name');
     imageName.innerText = image.name
     card.appendChild(imageName)

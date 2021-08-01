@@ -18,6 +18,7 @@ $bg-color-quaternary: hsl(206, 100%, 84%);
 $bg-color-quinary: hsl(335, 90%, 80%);
 
 
+
 html, body {
     margin: 0;
     padding: 0;
@@ -28,6 +29,20 @@ html {
     font-size: 62.5%;
 }
 
+@media (min-width: 150px) and (max-width: 320px) {
+    html {
+        font-size: 28%;
+    }
+
+
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 60%;
+    }
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -36,40 +51,23 @@ body {
     color: $primary-text-dark;
     margin: 0;
     height: 100vh;
- 
-    // background-color: tan;
-}
+ }
+
+ /* 
+Images
+ */
+
+ img {
+    max-width: 100%;
+    // display: block;
+    margin-bottom: 4em;
+ }
 
 
-.container {
-    width: 80%;
-    max-width: 620px; 
-    // min-width: 320px;
-    border: 2px solid coral;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 2rem;
 
-}
-
-.image {
-   padding-bottom: 3rem;
-  
-}
-
-
-.bold-text {
-    font-weight: 900;
-    display: block;
-}
-
-h1 .bold-text {
-    font-size: 6rem;
-}
-
-h2 .bold-text {
-    font-size: 5rem;
-}
+/* =================
+Typography
+================= */
 
 h1,
 h2 {
@@ -99,6 +97,28 @@ p {
     margin-bottom:0;
 }
 
+
+.bold-text {
+    font-weight: 900;
+    display: block;
+}
+
+.small-text {
+    font-size: 1rem;
+} 
+
+h1 .bold-text {
+    font-size: 7rem;
+}
+
+h2 .bold-text {
+    font-size: 5rem;
+}
+
+
+/* 
+Buttons and links
+ */
 .buttons {
     display: inline-block;
     font-size: 1.5rem;
@@ -126,11 +146,26 @@ p {
             background-color: yellow;
             color: red;
         }
+} /* 
+*/
+
+/* =================
+Layout
+================= */
+.container {
+    width: 80%;
+    max-width: 620px; 
+    // min-width: 320px;
+    border: 2px solid coral;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 3rem;
+
 }
 
-.small-text {
-    font-size: 16px;
-} 
+ /*
+Main Sections
+*/
 
 .hero,
 section {
@@ -143,6 +178,7 @@ section {
 
 .about-me {
     background-color: hsl(0, 100%, 96%);
+    
 }
 
 .articles {
@@ -165,14 +201,15 @@ section {
         color: $secondary-text-dark;
     }
     
-}
+}  /* ============= */
 
 
-/*NAV // HEADER -- 
-DROPDOWN
-*/
 
 
+
+/* =====================
+HEADER & NAV & DROPDOWN
+================= */
 header {
     background: hsl(300, 37%, 24%);
     display: flex;
@@ -243,15 +280,21 @@ header {
                 opacity: 1;
                 transform: translateX(0);
 
-    } /*HEADER/NAV/DROPDOWN
-        ENDS HERE*/
+    } 
+/* ==============
+===*/
+
+
+
+
 
 
 
     
-/* 
-FOOTER styles here
-  */
+
+/* =====================
+Footer
+================= */
 .wrapper {
     display: flex;
     justify-content: center;
@@ -281,13 +324,11 @@ FOOTER styles here
     background-color: pink;
     padding:.5rem;
     overflow: hidden;
-    font-size: smaller;
+    // font-size: smaller;
 
  .skill-basket {
         background-color: lawngreen;
-        // display: flex;
-        // flex-direction: flex-wrap;
-        // width:100%;
+     
        
     }
     
@@ -353,9 +394,15 @@ FOOTER styles here
     clear: both;
   }
 }
-   
+/* =============
+ ===*/
 
-// }
+
+
+/* =====================
+Media Queries
+================= */
+
 
 /* from a minimum width of 650px and bigger */
 @media (min-width: 650px) {
@@ -364,7 +411,46 @@ FOOTER styles here
         color: rebeccapurple;
     }
 
+    header {
+        background-color: rgb(153, 37, 153);
+    }
 
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .about-me {
+        width: 100%;
+       
+    }
+    
+    .spacing {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+    
+    .works {
+        // display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        width:17.2%;
+        border: 1px solid green;
+        margin-bottom: 0;
+    }
+
+    .works:hover,
+    .works:focus {
+        background: lightgreen;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 60%;
+    }
 }
 
 /* from a minimum width of 400px up to a width of 649px */
@@ -374,8 +460,12 @@ FOOTER styles here
         color: rgb(105, 40, 170);
     }
 
+    .container
+     {
+        width: 75%;
+    }
     .hero {
-        background-color: hsl(327, 100%, 96%);
+        background-color: hsl(266, 82%, 67%);
     }
     
     .about-me {

@@ -9,6 +9,18 @@ html {
   font-size: 62.5%;
 }
 
+@media (min-width: 150px) and (max-width: 320px) {
+  html {
+    font-size: 28%;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 2.1rem;
@@ -18,32 +30,17 @@ body {
   height: 100vh;
 }
 
-.container {
-  width: 80%;
-  max-width: 620px;
-  border: 2px solid coral;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 2rem;
+/* 
+Images
+ */
+img {
+  max-width: 100%;
+  margin-bottom: 4em;
 }
 
-.image {
-  padding-bottom: 3rem;
-}
-
-.bold-text {
-  font-weight: 900;
-  display: block;
-}
-
-h1 .bold-text {
-  font-size: 6rem;
-}
-
-h2 .bold-text {
-  font-size: 5rem;
-}
-
+/* =================
+Typography
+================= */
 h1,
 h2 {
   font-weight: 300;
@@ -72,6 +69,26 @@ p {
   margin-bottom: 0;
 }
 
+.bold-text {
+  font-weight: 900;
+  display: block;
+}
+
+.small-text {
+  font-size: 1rem;
+}
+
+h1 .bold-text {
+  font-size: 7rem;
+}
+
+h2 .bold-text {
+  font-size: 5rem;
+}
+
+/* 
+Buttons and links
+ */
 .buttons {
   display: inline-block;
   font-size: 1.5rem;
@@ -101,10 +118,23 @@ a:link:hover {
   color: red;
 }
 
-.small-text {
-  font-size: 16px;
+/* 
+*/
+/* =================
+Layout
+================= */
+.container {
+  width: 80%;
+  max-width: 620px;
+  border: 2px solid coral;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 3rem;
 }
 
+/*
+Main Sections
+*/
 .hero,
 section {
   padding: 100px 0;
@@ -142,9 +172,10 @@ section {
   color: #11088c;
 }
 
-/*NAV // HEADER -- 
-DROPDOWN
-*/
+/* ============= */
+/* =====================
+HEADER & NAV & DROPDOWN
+================= */
 header {
   background: #542754;
   display: -webkit-box;
@@ -218,11 +249,11 @@ ul li a {
           transform: translateX(0);
 }
 
-/*HEADER/NAV/DROPDOWN
-        ENDS HERE*/
-/* 
-FOOTER styles here
-  */
+/* ==============
+===*/
+/* =====================
+Footer
+================= */
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,7 +284,6 @@ FOOTER styles here
   background-color: pink;
   padding: .5rem;
   overflow: hidden;
-  font-size: smaller;
   /*ul nesting ends*/
   /*
         } col nesting ends*/
@@ -316,10 +346,59 @@ FOOTER styles here
   clear: both;
 }
 
+/* =============
+ ===*/
+/* =====================
+Media Queries
+================= */
 /* from a minimum width of 650px and bigger */
 @media (min-width: 650px) {
   body {
     color: rebeccapurple;
+  }
+  header {
+    background-color: #992599;
+  }
+  .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about-me {
+    width: 100%;
+  }
+  .spacing {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .works {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    width: 17.2%;
+    border: 1px solid green;
+    margin-bottom: 0;
+  }
+  .works:hover,
+  .works:focus {
+    background: lightgreen;
+  }
+  .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-size: 60%;
   }
 }
 
@@ -328,8 +407,11 @@ FOOTER styles here
   body {
     color: #6928aa;
   }
+  .container {
+    width: 75%;
+  }
   .hero {
-    background-color: #ffebf6;
+    background-color: #a266f0;
   }
   .about-me {
     background-color: #ebf9ff;

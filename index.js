@@ -31,24 +31,24 @@ const skill = [
       
     },
     
-    { 
-        name: 'ReactJs',
-        thumbnail: '#',
+    // { 
+    //     name: 'ReactJs',
+    //     thumbnail: '#',
     
-    },
+    // },
     
-    {
-        name: 'mySQL',
-        thumbnail: '#',
-        //credit:
-    },
+    // {
+    //     name: 'mySQL',
+    //     thumbnail: '#',
+    //     //credit:
+    // },
     
         
     {
         name: 'PHP',
         thumbnail: '#',
         //credit:
-    },
+    }
 
     
     
@@ -61,14 +61,28 @@ skill.forEach((image) => {
     const card = document.createElement('div')
     card.classList.add('card');
     skillBasket.appendChild(card)
+    card.style.border = "4px solid blue";
 
-    const picture = document.createElement('img')
-    picture.classList.add('picture');
-    picture.src = image.thumbnail
-    card.appendChild(picture)
+    // const picture = document.createElement('img')
+    // picture.classList.add('picture');
+    // picture.src = image.thumbnail
+    // card.appendChild(picture)
 
     const imageName = document.createElement('h4')
     imageName.classList.add('image-name');
     imageName.innerText = image.name
     card.appendChild(imageName)
 })
+
+
+const gra = function(min, max) {
+    return Math.random() * (max - min) + min;
+}
+const init = function(){
+	let items = document.getElementsByClassName('.section-container');
+	for (let i = 0; i < items.length; i++){
+		items[i].style.background = randomColor({luminosity: 'light'});
+	}
+	cssScrollSnapPolyfill()
+}
+init();
